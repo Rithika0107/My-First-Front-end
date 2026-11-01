@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Heritage for Kids</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    🏛 Heritage Learning Platform
+  </header>
+
+  <div id="homePage" class="container">
+    <h2>🔍 Search a Heritage Site</h2>
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Type site name (e.g. Temple)">
+      <button onclick="searchSite()">Search</button>
+    </div>
+
+    <div class="upload-box">
+      <label for="photoUpload">📸 Or upload a photo:</label>
+      <input type="file" id="photoUpload" accept="image/*" onchange="handlePhotoUpload(event)">
+    </div>
+
+    <h3>⭐ Popular Sites</h3>
+    <div class="popular-sites">
+      <button onclick="showSite('brihadeeswarar temple')">Brihadeeswarar Temple</button>
+      <button onclick="showSite('red fort')">Red Fort</button>
+    </div>
+  </div>
+
+  <div id="infoPage" class="container hidden">
+    <h2 id="siteName"></h2>
+    <p id="siteInfo"></p>
+    <button onclick="startQuiz()">Take a Quiz</button>
+    <button onclick="goHome()">Back</button>
+  </div>
+
+  <div id="quizPage" class="container hidden">
+    <h2>📝 Quiz Time!</h2>
+    <p id="question"></p>
+    <div id="options"></div>
+    <button onclick="goHome()">Back to Home</button>
+  </div>
+
+  <footer>
+    <p>Made with ❤️ for Kids</p>
+    <button onclick="showMessage()">Click Me!</button>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+  
